@@ -1,4 +1,4 @@
-`
+```
 ...
 "resources": [{
     "comments": "Generalized from resource: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount'.",
@@ -37,4 +37,4 @@
     },
     "dependsOn": []
 }]
-`
+```
