@@ -278,7 +278,7 @@ A condition evaluates whether a field or the value accessor meets certain criter
 
 When using the like and notLike conditions, you provide a wildcard * in the value. The value shouldn't have more than one wildcard `*`.
 When using the match and notMatch conditions, provide # to match a digit, ? for a letter, . to match any character, and any other character to match that actual character. While, match and notMatch are case-sensitive, all other conditions that evaluate a stringValue are case-insensitive. Case-insensitive alternatives are available in matchInsensitively and notMatchInsensitively.
-In an `[*]` alias array field value, each element in the array is evaluated individually with logical and between elements. For more information, see Evaluating the `[*]` alias.
+In an `[*]` alias array field value, each element in the array is evaluated individually with logical and between elements.
 
 #### Fields
 
@@ -294,15 +294,15 @@ The following fields are supported:
 - identity.type
     - Returns the type of managed identity enabled on the resource.
 - tags
-- tags['<tagName>']
+- ´tags['<tagName>']´
     - This bracket syntax supports tag names that have punctuation such as a hyphen, period, or space.
     - Where <tagName> is the name of the tag to validate the condition for.
-    - Examples: tags['Acct.CostCenter'] where Acct.CostCenter is the name of the tag.
-- tags['''<tagName>''']
+    - Examples: ´tags['Acct.CostCenter']´ where Acct.CostCenter is the name of the tag.
+- ´tags['''<tagName>''']´
     - This bracket syntax supports tag names that have apostrophes in it by escaping with double apostrophes.
     - Where '<tagName>' is the name of the tag to validate the condition for.
-    - Example: tags['''My.Apostrophe.Tag'''] where 'My.Apostrophe.Tag' is the name of the tag.
-- property aliases - for a list, see Aliases.
+    - Example: ´´´´tags['''My.Apostrophe.Tag''']´´´´ where 'My.Apostrophe.Tag' is the name of the tag.
+- property aliases - for a list, see [Find the property alias](#Find-the-property-alias).
 
 #### Value
 
