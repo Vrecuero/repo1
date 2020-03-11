@@ -125,20 +125,24 @@ Once a resource is open, hovering over the Resource Manager property name or val
 ### Azure CLI
 
 In Azure CLI, the az provider command group is used to search for resource aliases. The following example is a filter for the Microsoft.Storage namespace aliases.
+
+´´´
 #Login first with az login if not using Cloud Shell
 
 #Get Azure Policy aliases for type Microsoft.Storage
 
 az provider show --namespace Microsoft.Storage --expand "resourceTypes/aliases" --query "resourceTypes[].aliases[].name"
+´´´
 
 ### Azure PowerShell
 In Azure PowerShell, the Get-AzPolicyAlias cmdlet is used to search for resource aliases. The following example is a filter for the Microsoft.Storage namespace aliases.
-
+´´´
 #Login first with Connect-AzAccount if not using Cloud Shell
 
 #Use Get-AzPolicyAlias to list aliases for Microsoft.Storage
 
 (Get-AzPolicyAlias -NamespaceMatch 'Microsoft.Storage').Aliases
+´´´
 
 ### Azure Resource Graph
 
