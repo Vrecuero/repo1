@@ -126,23 +126,23 @@ Once a resource is open, hovering over the Resource Manager property name or val
 
 In Azure CLI, the az provider command group is used to search for resource aliases. The following example is a filter for the Microsoft.Storage namespace aliases.
 
-´´´
+```
 #Login first with az login if not using Cloud Shell
 
 #Get Azure Policy aliases for type Microsoft.Storage
 
 az provider show --namespace Microsoft.Storage --expand "resourceTypes/aliases" --query "resourceTypes[].aliases[].name"
-´´´
+```
 
 ### Azure PowerShell
 In Azure PowerShell, the Get-AzPolicyAlias cmdlet is used to search for resource aliases. The following example is a filter for the Microsoft.Storage namespace aliases.
-´´´
+```
 #Login first with Connect-AzAccount if not using Cloud Shell
 
 #Use Get-AzPolicyAlias to list aliases for Microsoft.Storage
 
 (Get-AzPolicyAlias -NamespaceMatch 'Microsoft.Storage').Aliases
-´´´
+```
 
 ### Azure Resource Graph
 
@@ -298,14 +298,14 @@ The following fields are supported:
 - identity.type
     - Returns the type of managed identity enabled on the resource.
 - tags
-- ´tags['<tagName>']´
+- `tags['<tagName>']`
     - This bracket syntax supports tag names that have punctuation such as a hyphen, period, or space.
     - Where <tagName> is the name of the tag to validate the condition for.
-    - Examples: ´tags['Acct.CostCenter']´ where Acct.CostCenter is the name of the tag.
-- ´tags['''<tagName>''']´
+    - Examples: `tags['Acct.CostCenter']` where Acct.CostCenter is the name of the tag.
+- `tags['''<tagName>''']`
     - This bracket syntax supports tag names that have apostrophes in it by escaping with double apostrophes.
     - Where '<tagName>' is the name of the tag to validate the condition for.
-    - Example: ´´´´tags['''My.Apostrophe.Tag''']´´´´ where 'My.Apostrophe.Tag' is the name of the tag.
+    - Example: ````tags['''My.Apostrophe.Tag''']```` where 'My.Apostrophe.Tag' is the name of the tag.
 - property aliases - for a list, see [Find the property alias](#Find-the-property-alias).
 
 #### Value
